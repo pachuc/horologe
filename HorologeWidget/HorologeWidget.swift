@@ -60,21 +60,21 @@ struct HorologeWidgetEntryView : View {
 
             HStack(spacing: 25) {
                 VStack {
-                    Text("San Francisco")
+                    Text("East Coast")
+                        .font(.headline)
+                    Text("\(timeString(date: entry.date, timeZone: TimeZone(identifier: "US/Eastern")))")
+                        .font(.title)
+                }
+                VStack {
+                    Text("India")
+                        .font(.headline)
+                    Text("\(timeString(date: entry.date, timeZone: TimeZone(identifier: "Asia/Calcutta")))")
+                        .font(.title)
+                }
+                VStack {
+                    Text("West Coast")
                         .font(.headline)
                     Text("\(timeString(date: entry.date, timeZone: TimeZone(identifier: "US/Pacific")))")
-                        .font(.title)
-                }
-                VStack {
-                    Text("London")
-                        .font(.headline)
-                    Text("\(timeString(date: entry.date, timeZone: TimeZone(identifier: "Europe/London")))")
-                        .font(.title)
-                }
-                VStack {
-                    Text("Amsterdam")
-                        .font(.headline)
-                    Text("\(timeString(date: entry.date, timeZone: TimeZone(identifier: "Europe/Amsterdam")))")
                         .font(.title)
                 }
             }
